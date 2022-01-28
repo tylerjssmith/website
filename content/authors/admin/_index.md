@@ -18,7 +18,7 @@ bio: My research interests include distributed robotics, mobile computing and pr
 
 # Interests to show in About widget
 interests:
-- Environmental epidemiology
+- Children's environmental health
 - Causal inference
 - Machine learning
 
