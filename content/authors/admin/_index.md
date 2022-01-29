@@ -67,4 +67,4 @@ highlight_name: true
 
 Tyler Smith is an environmental epidemiologist studying how chemical exposures during pregnancy and childhood can alter health and developmental trajectories. His doctoral research aims to estimate the effects of potential interventions to reduce drinking water arsenic during pregnancy on immune and respiratory outcomes among infants in rural northern Bangladesh. More generally, he is interested in combining rigorous study designs and novel statistical methods to estimate causal effects using observational data. 
 
-Prior to starting the doctoral program, Tyler worked in environmental policy. He holds an MPH in epidemiologic methods and a BA in history from Johns Hopkins. Tyler grew up in Seattle. When he’s not working, he can be found on the side of a mountain.
+Prior to starting the doctoral program, Tyler worked in environmental policy. He holds an MPH in epidemiologic methods and a BA in history from Johns Hopkins. Tyler was born and raised in Seattle. When he’s not working, he can be found hiking, skiing, or otherwise engaged on the side of a mountain.
