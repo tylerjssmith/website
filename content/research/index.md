@@ -19,9 +19,5 @@ Below are select examples of my research, including publications and presentatio
 
 * **Smith TJS**, Avolio LN, Navas-Acien A, Goessler W, van Geen A, ... Heaney CD. (2021). Arsenic Methylation and Body Composition among Pregnant Women in Rural Northern Bangladesh: The PAIR Study. Oral presentation at *International Society for Environmental Epidemiology (ISEE) Annual Meeting*. Virtual. August 23-26. ([Abstract](https://doi.org/10.1289/isee.2021.O-LT-043))
 
-* Heaney CD, **Smith TJS**\*\*, Ali H, Alland K, Avolio LN, ... Labrique AB. (2020). Arsenic and Immune Response to Influenza Vaccination in Pregnant Women and Newborns. Poster presented at *International Society for Environmental Epidemiology (ISEE) Annual Meeting*. Virtual. August 24-27. ([Abstract](https://doi.org/10.1289/isee.2020.virtual.P-0537))
-
 \* Authors contributed equally.
-
-\** Smith TJS presented.
 
