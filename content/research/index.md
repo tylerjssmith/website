@@ -15,9 +15,11 @@ Below are select examples of my research, including publications and presentatio
 
 * **Smith TJS**, Buckley JP, Navas-Acien A, Fry RC, van Geen A, ... Heaney CD. (2022). Drinking Water Arsenic, Hemoglobin, and Anemia among Pregnant Women in Rural Northern Bangladesh. Poster presented at *International Society for Environmental Epidemiology (ISEE) Annual Meeting*. Athens, Greece. September 18-21. ([Abstract](https://doi.org/10.1289/isee.2022.P-1210))
 
-* **Smith TJS**, Buckley JP, Navas-Acien A, Pearce JL, Avolio LN, ... Heaney CD. (2021). Using Self-organizing Maps to Identify Metal Mixture Exposures in Pregnant Women in Rural Northern Bangladesh. Oral presentation at *International Society of Exposure Science (ISES) Annual Meeting*. Virtual. August 30-September 2.
-
 * **Smith TJS**, Avolio LN, Navas-Acien A, Goessler W, van Geen A, ... Heaney CD. (2021). Arsenic Methylation and Body Composition among Pregnant Women in Rural Northern Bangladesh: The PAIR Study. Oral presentation at *International Society for Environmental Epidemiology (ISEE) Annual Meeting*. Virtual. August 23-26. ([Abstract](https://doi.org/10.1289/isee.2021.O-LT-043))
+
+## Machine Learning
+
+* **Smith TJS**, Buckley JP, Navas-Acien A, Pearce JL, Avolio LN, ... Heaney CD. (2021). Using Self-organizing Maps to Identify Metal Mixture Exposures in Pregnant Women in Rural Northern Bangladesh. Oral presentation at *International Society of Exposure Science (ISES) Annual Meeting*. Virtual. August 30-September 2.
 
 \* Authors contributed equally.
 
