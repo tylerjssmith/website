@@ -19,8 +19,8 @@ bio: Tyler Smith is an epidemiologist studying how environmental exposures durin
 # Interests to show in About widget
 interests:
 - Environmental epidemiology
-- Children's environmental health
 - Causal inference
+- Maternal and child health
 - Machine learning
 
 # Education to show in About widget
