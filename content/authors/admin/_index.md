@@ -14,7 +14,7 @@ organizations:
   url: https://www.jhsph.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Tyler Smith is an epidemiologist studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories.
 
 # Interests to show in About widget
 interests:
