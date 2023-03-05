@@ -1,7 +1,7 @@
 ---
 title: Research
 ---
-Below are select examples of my research, including publications and presentations. When possible, I plan to include links to the full text of a journal article or published abstract, or the slide deck or poster that was presented at a conference. I also plan to include available code. This is a work in progress, however. Please contact me with any questions.
+Below are select examples of my research, including publications and presentations. Please [contact me](https://www.tylerjssmith.com/#contact) with any questions.
 
 ## Causal Inference
 
