@@ -70,5 +70,5 @@ security:
   _merge: deep
 cascade:
   - _target:
-      path: /publication/**
+      path: /research/**
     share: false
