@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Tyler Smith, PhD, MPH
+title: Tyler Smith, PhD
 
 # Is this the primary user of the site?
 superuser: true
