@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Tyler Smith, MPH
+title: Tyler Smith, PhD, MPH
 
 # Is this the primary user of the site?
 superuser: true
@@ -26,6 +26,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: PhD, Exposure Science and Environmental Epidemiology
+    institution: Johns Hopkins Bloomberg School of Public Health
+    year: 2023
   - course: MPH, Epidemiologic Methods
     institution: Johns Hopkins Bloomberg School of Public Health
     year: 2015
@@ -65,6 +68,6 @@ email: ""
 highlight_name: true
 ---
 
-Tyler Smith is an epidemiologist studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories. His doctoral research aims to estimate the effects of potential interventions to reduce drinking water arsenic during pregnancy on immune and respiratory outcomes among infants in [rural northern Bangladesh](https://doi.org/10.1111/ppe.12949). More generally, he is interested in combining rigorous study designs and novel statistical methods to [estimate causal effects](uploads/Smith_et_al_2022_EstimatingCausalEffects.pdf) using observational data. 
+Tyler Smith is an epidemiologist studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories. His doctoral research aimed to estimate the effects of potential interventions to reduce drinking water arsenic during pregnancy on immune and respiratory outcomes among infants in [rural northern Bangladesh](https://doi.org/10.1111/ppe.12949). More generally, he is interested in combining rigorous study designs and novel statistical methods to [estimate causal effects](uploads/Smith_et_al_2022_EstimatingCausalEffects.pdf) using observational data. 
 
-Prior to starting the doctoral program, Tyler worked in [environmental policy](https://doi.org/10.1371/journal.pone.0118138). He holds an MPH in epidemiologic methods and a BA in history from Johns Hopkins. Tyler was born and raised in Seattle. When he’s not working, he can be found hiking, skiing, or otherwise engaged on the side of a mountain.
+Tyler holds a PhD in exposure science and environmental epidemiology and an MPH in epidemiologic methods from Johns Hopkins. Before the doctoral program, he worked in [environmental policy](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle. When he’s not working, he can be found hiking, skiing, or otherwise engaged on the side of a mountain.
