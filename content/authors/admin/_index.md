@@ -6,12 +6,12 @@ title: Tyler Smith, PhD
 superuser: true
 
 # Role/position/tagline
-role: Environmental Epidemiologist
+role: Postdoctoral Fellow
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Johns Hopkins University
-  url: https://www.jhsph.edu/
+- name: Icahn School of Medicine at Mount Sinai
+  url: https://icahn.mssm.edu/about/departments/environmental-public-health
 
 # Short bio (displayed in user profile at end of posts)
 bio: Tyler Smith is an epidemiologist studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories.
