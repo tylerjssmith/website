@@ -10,7 +10,7 @@ role: Postdoctoral Fellow
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Icahn School of Medicine at Mount Sinai
+- name: Mount Sinai School of Medicine
   url: https://icahn.mssm.edu/about/departments/environmental-public-health
 
 # Short bio (displayed in user profile at end of posts)
