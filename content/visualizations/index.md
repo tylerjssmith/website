@@ -23,7 +23,7 @@ The distributions follow an expected pattern: a decrease in hemoglobin over preg
 
 Here is a scatter plot showing maternal hemoglobin by gestational age in pregnancy only (Visits 1-2). In pregnancy, the blood plasma volume expands to support increased circulation in the woman and fetus. This results in "hemodilution," which is reflected by the negative association between hemoglobin and gestational age.
 
-![The image shows a scatter plot of maternal hemoglobin by gestational age with a linear smoother.](/scatter_hemo.png)
+![The image shows a scatter plot of maternal hemoglobin by gestational age with a linear smoother.](/scatter_hemo_gstage.png)
 
 ### Scatter Plot: Urinary by Drinking Water Arsenic
 
