@@ -13,14 +13,20 @@ The distributions follow an expected pattern: a decrease in hemoglobin over preg
 
 #### Single Facet
 
-![The image shows a density plot of maternal hemoglobin by study visit using a single facet.](/density_hemo_visit_single.png)
+![The image shows density plots of maternal hemoglobin by study visit with all plots on a single facet.](/density_hemo_visit_single.png)
 
 #### Multiple Facets
+
+![The image shows density plots of maternal hemoglobin by study visit with each plot on a separate facet.](/density_hemo_visit_multi.png)
 
 ### Scatter Plot: Maternal Hemoglobin in Pregnancy by Gestational Age
 
 Here is a scatter plot showing maternal hemoglobin by gestational age in pregnancy only (Visits 1-2). In pregnancy, the blood plasma volume expands to support increased circulation in the woman and fetus. This results in "hemodilution," which is reflected by the negative association between hemoglobin and gestational age.
 
+![The image shows a scatter plot of maternal hemoglobin by gestational age with a linear smoother.](/scatter_hemo.png)
+
 ### Scatter Plot: Urinary by Drinking Water Arsenic
 
 Here is a scatter plot showing urinary arsenic by drinking water arsenic among pregnant women at Visit 1. Bangladesh has some of the highest arsenic exposure in the world due to naturally occurring arsenic in groundwater, which is used for drinking and irrigation. Urinary arsenic is a commonly used measure of total arsenic exposure. The plot below confirms that drinking water arsenic is a key driver of total arsenic exposure.
+
+![The image shows a scatter plot of urinary arsenic by drinking water arsenic with a non-linear smoother.](/scatter_arsenic.png)
