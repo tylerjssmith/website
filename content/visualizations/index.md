@@ -13,7 +13,7 @@ The distributions follow an expected pattern: a decrease in hemoglobin over preg
 
 #### Single Facet
 
-![The image shows a density plot of maternal hemoglobin by study visit using a single facet.](/images/density_hemo_visit_single.png)
+![The image shows a density plot of maternal hemoglobin by study visit using a single facet.](/static/img/density_hemo_visit_single.png)
 
 #### Multiple Facets
 
