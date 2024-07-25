@@ -13,6 +13,9 @@ main:
   - name: Research
     url: 'research/'
     weight: 20
+  - name: Visualizations
+    url: 'visualizations/'
+    weight: 30
   - name: Contact
     url: '#contact'
     weight: 30
