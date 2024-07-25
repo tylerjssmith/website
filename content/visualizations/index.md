@@ -1,5 +1,5 @@
 ---
-title: Visualizations
+title: Data Visualizations
 ---
 Below are select examples of my data visualizations from the Pregnancy, Arsenic, and Immune Response (PAIR) Study, a pregnancy and birth cohort based in rural northern Bangladesh. 
 
