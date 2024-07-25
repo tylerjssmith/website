@@ -11,7 +11,7 @@ Here are density plots showing maternal hemoglobin, the oxygen-transport protein
 
 The distributions follow an expected pattern: a decrease in hemoglobin over pregnancy (Visit 1 to Visit 2) and an increase following live birth (Visit 2 to Visit 3 to Visit 4). Visit 3 was conducted in the weeks after live birth, when maternal hemodynamics are highly variable. The higher dispersion of the distribution at Visit 3 is consistent with this process.
 
-![The image shows a density plot of maternal hemoglobin by study visit using a single facet.](uploads/dens_hemo_visit_single.png)
+![The image shows a density plot of maternal hemoglobin by study visit using a single facet.](dens_hemo_visit_single.png)
 
 #### Single Facet
 
