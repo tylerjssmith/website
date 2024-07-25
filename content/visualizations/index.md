@@ -1,3 +1,3 @@
 ---
-Visualizations
+title: Visualizations
 ---
