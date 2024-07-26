@@ -8,7 +8,7 @@ main:
     url: '#about'
     weight: 10
   - name: CV
-    url: /uploads/SmithTyler_Resume_DataScience_2024_0726.pdf
+    url: /uploads/SmithTyler_Resume_DataScientist_2024_0726.pdf
     weight: 20
   - name: Research
     url: 'research/'
