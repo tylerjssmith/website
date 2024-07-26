@@ -1,7 +1,7 @@
 ---
 title: Data Visualizations
 ---
-Below are select examples of my data visualizations from the Pregnancy, Arsenic, and Immune Response (PAIR) Study, a pregnancy and birth cohort based in rural northern Bangladesh. Figures were made using ggplot2. All code is available in an accompanying [Quarto document](https://github.com/tylerjssmith/website/blob/master/static/data_visualizations_code.qmd).
+Below are select examples of my data visualizations from the Pregnancy, Arsenic, and Immune Response (PAIR) Study, a pregnancy and birth cohort based in rural northern Bangladesh. Figures were made using R's ggplot2.
 
 In 2018-2019, the PAIR Study enrolled 784 pregnant women in the early second trimester in Gaibandha District, Bangladesh. We followed women to the end of pregnancy. If pregnancy ended in live birth, we followed mother-infant pairs to three months postpartum. We conducted up to two major study visits in pregnancy (below, Visits 1 and 2) and up to two major study visits postpartum (Visits 3 and 4). For more information, see our published [cohort profile](https://onlinelibrary.wiley.com/doi/full/10.1111/ppe.12949).
 
