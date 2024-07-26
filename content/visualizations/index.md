@@ -39,6 +39,6 @@ Below, a box plot shows distributions of drinking water arsenic and different "s
 
 Below, a bar plot shows loadings for a principal components analysis (PCA) of drinking water elements. Arsenic may co-occur with other elements, some of which are toxicologically significant. PCA was used to identify which elements tend to co-occur, which suggests typical exposure patterns in the population. 
 
-Four of 16 components explained 73.4% of total variance. Arsenic tended to co-occur with several toxicologically significant elements, including iron (Fe) and manganese (Mn).
+Four of 16 components explained 73.4% of total variance. As shown by PC1, arsenic (As) tended to co-occur with several toxicologically significant elements, including iron (Fe) and manganese (Mn).
 
 ![The image shows bar plots indicating the loadings from a principal components analysis of drinking water elements.](/bar_pca.png)
