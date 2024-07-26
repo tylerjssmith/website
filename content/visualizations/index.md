@@ -34,3 +34,11 @@ Below, a scatter plot shows urinary arsenic by drinking water arsenic among preg
 Below, a box plot shows distributions of drinking water arsenic and different "species" or forms of urinary arsenic, including inorganic, monomethyl, and dimethyl arsenic (iAs, MMA, and DMA, respectively) and their sum.
 
 ![The image shows a box plot of drinking water arsenic and urinary arsenic species, including inorganic, monomethyl, and dimethyl arsenic, and their sum.](/box_arsenic.png)
+
+### Bar Plot: Principal Components Analysis of Drinking Water Elements
+
+Below, a bar plot shows loadings for a principal components analysis (PCA) of drinking water elements. Arsenic may co-occur with other elements, some of which are toxicologically significant. PCA was used to identify which elements tend to co-occur, which suggests typical exposure patterns in the population. 
+
+Four of 16 components explained 73.4% of total variance. Arsenic tended to co-occur with several toxicologically significant elements, including iron (Fe) and manganese (Mn).
+
+![The image shows bar plots indicating the loadings from a principal components analysis of drinking water elements.](/bar_pca.png)
