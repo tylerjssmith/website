@@ -1,0 +1,367 @@
+---
+title: "Data Visualization Examples with ggplot2"
+author: "Tyler J. S. Smith, PhD, MPH"
+date: "July 24, 2024"
+format: html
+---
+
+Below are select examples of my data visualizations from the Pregnancy, Arsenic, and Immune Response (PAIR) Study, a pregnancy and birth cohort based in rural northern Bangladesh. 
+
+In 2018-2019, the PAIR Study enrolled 784 pregnant women in the early second trimester in Gaibandha District, Bangladesh. We followed women to the end of pregnancy. If pregnancy ended in live birth, we followed mother-infant pairs to three months postpartum. We conducted up to two major study visits in pregnancy (below, Visits 1 and 2) and up to two major study visits postpartum (Visits 3 and 4). For more information, see our published [cohort profile](https://onlinelibrary.wiley.com/doi/full/10.1111/ppe.12949).
+
+### Preliminaries
+
+```{r setup, message = FALSE}
+library(tidyverse)
+```
+
+### Define Plot Theme and Color Palette
+
+```{r theme}
+# Plot Theme
+th = theme_bw() +
+  theme(
+    # Lines
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    
+    # Titles
+    plot.title = element_text(size = 16, 
+      face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    strip.text = element_text(size = 12),
+    
+    # Axes
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    
+    # Legend and Caption
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10),
+    plot.caption = element_text(size = 10))
+
+# Color Palette
+palette = c("#DD5129FF", "#0F7BA2FF", "#43B284FF", "#FAB255FF")
+```
+
+```{r data_hemo, include = FALSE}
+# Read Data
+pr = read_csv("2024_0108_pair_data/j7pregtrak/pair_pregtrak_2022_0309.csv")
+v1 = read_csv("2024_0108_pair_data/pefsst/pair_pefsst_2022_0310.csv")
+v2 = read_csv("2024_0108_pair_data/vaxfsst/pair_vaxfsst_2022_0310.csv")
+v3 = read_csv("2024_0108_pair_data/mdab/pair_mdab_2022_0310.csv")
+v4 = read_csv("2024_0108_pair_data/m3mopsst/pair_m3mopsst_2022_0310.csv")
+
+# Join Data and Select Variables
+df_hemo = pr %>% select(UID, BGLMPWK)
+
+for(i in c("v1","v2","v3","v4")) {
+  df_hemo_i = get(i)
+  hemo = colnames(df_hemo_i)[grep("HEMO", colnames(df_hemo_i))]
+  week = colnames(df_hemo_i)[grep("WKIN", colnames(df_hemo_i))]
+  
+  df_hemo_i = df_hemo_i %>%
+    select(UID, {{ week }}, {{ hemo }}) %>%
+    mutate(across(contains("WKIN"), ~ as.numeric(.x))) %>%
+    mutate(across(contains("HEMO"), ~ as.numeric(.x))) %>%
+    mutate(across(contains("HEMO"), ~ ifelse(.x > 90, NA, .x)))
+  
+  df_hemo = left_join(df_hemo, df_hemo_i, by = "UID")
+}
+
+rm(list = c("pr","v1","v2","v3","v4","df_hemo_i","i","week","hemo"))
+
+# Rename Variables
+df_hemo = df_hemo %>%
+  rename(
+    `Visit 1` = SEHEMO,
+    `Visit 2` = SVXHEMO,
+    `Visit 3` = SMHEMO,
+    `Visit 4` = SM3HEMO)
+
+# Pivot Longer
+df_hemo = df_hemo %>%
+  pivot_longer(
+    cols = -c(UID,contains("WK")),
+    names_to = "VISIT",
+    values_to = "HEMO"
+  )
+
+df_hemo = df_hemo %>%
+  mutate(WEEK =
+    ifelse(VISIT == "Visit 1", SEWKINT,
+    ifelse(VISIT == "Visit 2", SVXWKINT,
+    ifelse(VISIT == "Visit 3", SMWKINT,
+    ifelse(VISIT == "Visit 4", SM3WKINT, NA))))
+  )
+
+df_hemo = df_hemo %>%
+  mutate(GSTAGE = WEEK - BGLMPWK) %>%
+  select(UID, VISIT, GSTAGE, HEMO)
+
+# Drop Missing Values
+df_hemo = df_hemo %>%
+  na.omit()
+
+df_hemo %>% head()
+```
+
+```{r data_arsenic, include = FALSE}
+water = read_csv("2024_0108_pair_data/assay_water_metals/pair_watermetals_pef_2022_1030.csv")
+urine = read_csv("2024_0108_pair_data/assay_urinary_metals/pair_urinaryarsenic_2022_1029.csv")
+
+water = water %>%
+  select(UID, Water = PE_wMetals_As) %>%
+  mutate(UID = as.numeric(UID))
+
+urine = urine %>%
+  select(UID, Urine = PE_uAs_Sum_SG,
+    iAs = PE_uAs_iAs_SG,
+    MMA = PE_uAs_MMA_SG,
+    DMA = PE_uAs_DMA_SG)
+
+df_arsenic = water %>%
+  left_join(urine, by = "UID") %>%
+  mutate(across(-UID, ~ log10(.x))) %>%
+  na.omit()
+
+rm(list = c("water","urine"))
+
+df_arsenic %>% head()
+```
+
+### Density Plot: Maternal Hemoglobin by Study Visit
+
+Below, density plots show distributions of maternal hemoglobin, the oxygen-transport protein, by study visit. The distributions follow an expected pattern: a decrease in hemoglobin over pregnancy (Visits 1 to 2) and an increase following live birth (Visits 2 to 3 to 4). Visit 3 was conducted in the weeks after live birth when maternal hemodynamics are highly variable, which is reflected by the higher dispersion.
+
+```{r show_data_hemo}
+df_hemo %>% head()
+```
+
+#### Single Facet
+
+```{r dens_hemo_single, fig.align = "center", fig.dim = c(8, 6)}
+# Make Plot
+dens_hemo_single = df_hemo %>%
+  ggplot(aes(x = HEMO, fill = VISIT)) +
+  geom_density(alpha = 0.4)
+
+# Set Scales
+dens_hemo_single = dens_hemo_single +
+  scale_x_continuous(breaks = seq(0, 20, 1)) +
+  scale_y_continuous(limits = c(0, 0.5)) +
+  scale_fill_manual(values = palette)
+
+# Set Labels and Theme
+dens_hemo_single = dens_hemo_single +
+  labs(
+    title = "Maternal Hemoglobin by Study Visit",
+    subtitle = "PAIR Study, Gaibandha District, Bangladesh, 2018-2019",
+    x = "Maternal Hemoglobin (g/dL)",
+    y = "Density",
+    fill = "Study Visit") +
+  th
+
+# Show Plot
+print(dens_hemo_single)
+```
+
+#### Multiple Facets
+
+```{r dens_hemo_multi, message = FALSE, fig.align = 'center', fig.dim = c(8, 6)}
+# Get Medians
+meds = df_hemo %>%
+  group_by(VISIT) %>%
+  summarise(x = median(HEMO))
+
+# Make Plot
+dens_hemo_multi = df_hemo %>%
+  ggplot(aes(x = HEMO, fill = VISIT)) +
+  geom_density(alpha = 0.4) +
+  geom_vline(data = meds, mapping = aes(xintercept = x), linetype = "dashed")
+
+# Set Scales
+dens_hemo_multi = dens_hemo_multi +
+  scale_x_continuous(breaks = seq(0, 20, 1)) +
+  scale_y_continuous(limits = c(0, 0.5), breaks = seq(0,0.6,0.2)) +
+  scale_fill_manual(values = palette)
+
+# Set Facets
+dens_hemo_multi = dens_hemo_multi +
+  facet_wrap(. ~ VISIT, ncol = 1)
+
+# Set Labels and Theme
+dens_hemo_multi = dens_hemo_multi +
+  labs(
+    title = "Maternal Hemoglobin by Study Visit",
+    subtitle = "PAIR Study, Gaibandha District, Bangladesh, 2018-2019",
+    x = "Maternal Hemoglobin (g/dL)",
+    y = "Density",
+    fill = "Study Visit",
+    caption = "\nVertical line indicates median value.") +
+  th
+
+# Show Plot
+print(dens_hemo_multi)
+```
+
+### Scatter Plot: Maternal Hemoglobin in Pregnancy by Gestational Age
+
+Below, a scatter plot shows maternal hemoglobin by gestational age in pregnancy (Visits 1 and 2). In pregnancy, the blood plasma volume expands to support increased circulation in the woman and fetus. This results in "hemodilution," which is reflected by the negative association between hemoglobin and gestational age.
+
+```{r show_data_hemo2}
+df_hemo %>% head()
+```
+
+#### Scatter Plot
+
+```{r scat_hemo, fig.align = 'center', message = FALSE, fig.dim = c(8, 6)}
+# Make Plot
+scat_hemo = df_hemo %>%
+  filter(VISIT %in% c("Visit 1","Visit 2")) %>%
+  ggplot(aes(x = GSTAGE, y = HEMO, color = VISIT)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = 'lm', se = FALSE, color = "black")
+
+# Set Scales
+scat_hemo = scat_hemo +
+  scale_x_continuous(breaks = seq(0, 40, 1)) +
+  scale_y_continuous(breaks = seq(0, 20, 1)) +
+  scale_color_manual(values = palette)
+
+# Set Labels and Theme
+scat_hemo = scat_hemo +
+  labs(
+    title = "Maternal Hemoglobin in Pregnancy by Gestational Age",
+    subtitle = "PAIR Study, Gaibandha District, Bangladesh, 2018-2019",
+    x = "Gestational Age (weeks)",
+    y = "Maternal Hemoglobin (g/dL)",
+    color = "Study Visit") +
+  th
+
+# Show Plot
+print(scat_hemo)
+```
+
+### Scatter Plot: Urinary by Drinking Water Arsenic 
+
+Below, a scatter plot shows urinary arsenic by drinking water arsenic among pregnant women at Visit 1. Bangladesh has some of the highest arsenic exposures in the world due to naturally occurring arsenic in groundwater, which is used for drinking and irrigation. Urinary arsenic is a widely used measure of total arsenic exposure. The plot below confirms that drinking water is a key source of total arsenic exposure.
+
+```{r show_data_arsenic1}
+df_arsenic %>% select(UID, Water, Urine) %>% head()
+```
+
+```{r scat_arsenic, fig.align = 'center', message = FALSE, , fig.dim = c(8, 6)}
+# Function to Modify Axis Scale
+base10 = function(x) 10 ^ x
+
+# Tibble with Labels
+labs = tibble(x = c(10, 50), y = c(650, 650), label = c("10 µg/L", "50 µg/L"))
+labs = labs %>% mutate(x = log10(x), y = log10(y))
+
+# Categorize Drinking Water
+df_arsenic = df_arsenic %>%
+  mutate(Category = 
+      ifelse(Water <= log10(10),                      "≤10", 
+      ifelse(Water >  log10(10) & Water <= log10(50), ">10-≤50",
+      ifelse(Water >  log10(50),                      ">50", NA))))
+
+df_arsenic = df_arsenic %>%
+  mutate(Category =
+      factor(Category,
+        levels = c("≤10",">10-≤50",">50"),
+        labels = c("≤10",">10-≤50",">50")))
+
+# Make Plot
+scat_arsenic = df_arsenic %>%
+  ggplot(aes(x = Water, y = Urine, color = Category)) +
+  geom_vline(xintercept = log10(10), linetype = "dashed") +
+  geom_vline(xintercept = log10(50), linetype = "dashed") +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = 'loess', se = FALSE, color = "black") +
+  geom_label(data = labs, mapping = aes(x = x, y = y, label = label), 
+    size = 4, label.size = 0, inherit.aes = FALSE)
+
+# Set Scales
+scat_arsenic = scat_arsenic + 
+  scale_x_continuous(limits = c(-2, 3), breaks = seq(-10, 10, 1), 
+    labels = base10) +
+  scale_y_continuous(limits = c( 0, 3), breaks = seq(-10, 10, 1), 
+    labels = base10) +
+  scale_color_manual(values = rev(palette[1:3]))
+
+# Set Labels and Theme
+scat_arsenic = scat_arsenic +
+  labs(
+    title = "Urinary by Drinking Water Arsenic",
+    subtitle = "PAIR Study, Gaibandha District, Bangladesh, 2018-2019",
+    x = "Drinking Water Arsenic (µg/L)",
+    y = "Urinary Arsenic (µg/L)",
+    color = "Drinking Water\nArsenic (µg/L)",
+    caption = "\nData come from Visit 1. Vertical lines indicate arsenic standards of 
+    World Health Organization (10 µg/L) and Bangladesh (50 µg/L).") +
+  th
+
+# Show Plot
+print(scat_arsenic)
+```
+
+Below, a box plot shows distributions of drinking water arsenic and different "species" or forms of urinary arsenic, including inorganic, monomethyl, and dimethyl arsenic (iAs, MMA, and DMA, respectively) and their sum.
+
+```{r show_data_arsenic2}
+df_arsenic %>% head()
+```
+
+```{r box_arsenic, message = FALSE}
+# Wrangle Data
+df_arsenic_box = df_arsenic %>%
+  rename(`∑Urine` = Urine) %>%
+  pivot_longer(-c(UID, Category), names_to = "Species", 
+    values_to = "Concentration") %>%
+  mutate(Biomarker = ifelse(Species != "Water", "Urine", "Water")) %>%
+  mutate(Biomarker = factor(Biomarker, 
+    levels = c("Water","Urine"))) %>%
+  mutate(Species = factor(Species, 
+    levels = c("Water","iAs","MMA","DMA","∑Urine"))) %>%
+  na.omit()
+
+# Make Plot
+box_arsenic_pre = df_arsenic_box %>%
+  ggplot(aes(x = Species, y = Concentration, group = Species)) +
+  geom_boxplot()
+
+# Set Scales
+box_arsenic_pre = box_arsenic_pre +
+  scale_y_continuous(labels = base10)
+
+# Set Facets
+box_arsenic_pre = box_arsenic_pre +
+  facet_wrap(. ~ Biomarker, scales = "free_x")
+
+# Set Labels and Theme
+box_arsenic_pre = box_arsenic_pre +
+  labs(
+    title = "Drinking Water and Urinary Arsenic",
+    subtitle = "PAIR Study, Gaibandha District, Bangladesh, 2018-2019",
+    x = NULL,
+    y = expression("Concentration (" * mu * "g/L)"),
+    caption = "\nData come from Visit 1.") +
+  th +
+  theme(
+    axis.title.x = element_blank(),
+    axis.text.x = element_text(size = 12, color = "black"))
+
+# Adjust Facet and Geom Sizes
+box_arsenic = ggplotGrob(box_arsenic_pre)
+
+facet.columns = box_arsenic$layout$l[grepl("panel", box_arsenic$layout$name)]
+
+x.var = sapply(ggplot_build(box_arsenic_pre)$layout$panel_scales_x, 
+  function(l) length(l$range$range))
+
+box_arsenic$widths[facet.columns] = box_arsenic$widths[facet.columns] * x.var
+
+# Show Figure
+grid::grid.draw(box_arsenic)
+```
+
