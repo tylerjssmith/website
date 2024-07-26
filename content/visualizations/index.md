@@ -25,6 +25,12 @@ Below, a scatter plot shows maternal hemoglobin by gestational age in pregnancy 
 
 ### Scatter Plot: Urinary by Drinking Water Arsenic
 
-Finally, a scatter plot shows urinary arsenic by drinking water arsenic among pregnant women at Visit 1. Bangladesh has some of the highest arsenic exposures in the world due to naturally occurring arsenic in groundwater, which is used for drinking and irrigation. Urinary arsenic is a widely used measure of total arsenic exposure. The plot below confirms that drinking water is a key source of total arsenic exposure.
+Below, a scatter plot shows urinary arsenic by drinking water arsenic among pregnant women at Visit 1. Bangladesh has some of the highest arsenic exposures in the world due to naturally occurring arsenic in groundwater, which is used for drinking and irrigation. Urinary arsenic is a widely used measure of total arsenic exposure. The plot below confirms that drinking water is a key source of total arsenic exposure.
 
 ![The image shows a scatter plot of urinary arsenic by drinking water arsenic with a non-linear smoother.](/scatter_arsenic.png)
+
+### Box Plot: Drinking Water and Urinary Arsenic
+
+Below, a box plot shows distributions of drinking water arsenic and different "species" or forms of urinary arsenic, including inorganic, monomethyl, and dimethyl arsenic (iAs, MMA, and DMA, respectively) and their sum.
+
+![The image shows a box plot of drinking water arsenic and urinary arsenic species, including inorganic, monomethyl, and dimethyl arsenic, and their sum.](/box_arsenic.png)
