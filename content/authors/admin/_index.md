@@ -18,10 +18,10 @@ bio: Tyler Smith is an epidemiologist studying how environmental exposures durin
 
 # Interests to show in About widget
 interests:
+- Cybersecurity
 - Environmental epidemiology
-- Causal inference
-- Maternal and child health
 - Machine learning
+- Causal inference
 
 # Education to show in About widget
 education:
@@ -67,7 +67,10 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
+Tyler Smith is a data scientist with 14 years of professional experience. He is an expert at building data pipelines and machine learning models using Python, R, and SQL, visualizing results, and reporting actionable information to decision-makers.
 
-Tyler Smith is a data scientist with 13 years of data and policy analysis experience. An epidemiologist, he is studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories. His doctoral research aimed to estimate the effects of potential interventions to reduce drinking water arsenic during pregnancy on immune and respiratory outcomes among infants in [rural northern Bangladesh](https://doi.org/10.1111/ppe.12949). More generally, he is interested in combining rigorous study designs and novel statistical methods to [estimate causal effects](uploads/Smith_et_al_2022_EstimatingCausalEffects.pdf) using observational data. 
+Tyler works at the intersection of data science and cybersecurity, including the analysis of log and telemetry data, threat intelligence, and more to detect and respond to security incidents. His cybersecurity certifications include CompTIA Security+.
 
-Tyler holds a PhD in exposure science and environmental epidemiology and an MPH in epidemiologic methods, both from Johns Hopkins. Before the doctoral program, he worked in [environmental policy](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle. When he’s not working, he can be found hiking, skiing, or otherwise engaged on the side of a mountain.
+Tyler also combines rigorous study designs and machine learning to investigate how [environmental exposures](uploads/Smith_et_al_2022_EstimatingCausalEffects.pdf) during pregnancy and childhood can alter health and development. His current research focuses on air pollution during pregnancy in Canada. His doctoral research estimated how reductions in arsenic exposure could improve children’s health in [rural Bangladesh](https://doi.org/10.1111/ppe.12949).
+
+Tyler holds a PhD in Exposure Science and Environmental Epidemiology and an MPH in Epidemiology and Biostatistics, both from Johns Hopkins. Before the PhD, he worked in [environmental policy](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle.
