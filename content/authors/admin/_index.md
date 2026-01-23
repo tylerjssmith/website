@@ -67,10 +67,8 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Tyler Smith is a data scientist with 14 years of professional experience. He is an expert at building data pipelines and machine learning models using Python, R, and SQL, visualizing results, and reporting actionable information to decision-makers.
+Tyler Smith is a data scientist transitioning to cybersecurity with a STEM PhD, Security+ certification, and over 7 years of experience building and operationalizing machine learning models and data pipelines. 
 
-Tyler works at the intersection of data science and cybersecurity, including the analysis of log and telemetry data, threat intelligence, and more to detect and respond to security incidents. His cybersecurity certifications include CompTIA Security+.
+Currently, as a postdoctoral research fellow at the Icahn School of Medicine at Mount Sinai, Tyler specializes in building supervised and unsupervised learning models for complex health datasets using Python and SQL. Previously, at Johns Hopkins University, his PhD research included anomaly detection in high-dimensional datasets using R and SQL. His cybersecurity experience includes developing AI/LLM-powered security automation tools ([GitHub](https://github.com/tylerjssmith/inspector-llm-enricher)) and deploying and securing a data-driven web application on AWS ([GitHub](https://github.com/tylerjssmith/rainydaypolitics)). Tyler combines strong analytical capabilities with proven experience communicating technical insights to diverse audiences, making him well-positioned for cybersecurity roles requiring both technical depth and strategic communication.
 
-Tyler also combines rigorous study designs and machine learning to investigate how [environmental exposures](uploads/Smith_et_al_2022_EstimatingCausalEffects.pdf) during pregnancy and childhood can alter health and development. His current research focuses on air pollution during pregnancy in Canada. His doctoral research estimated how reductions in arsenic exposure could improve children’s health in [rural Bangladesh](https://doi.org/10.1111/ppe.12949).
-
-Tyler holds a PhD in Exposure Science and Environmental Epidemiology and an MPH in Epidemiology and Biostatistics, both from Johns Hopkins. Before the PhD, he worked in [environmental policy](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle.
+Tyler holds a PhD in Exposure Science and Environmental Epidemiology and an MPH in Epidemiology and Biostatistics, both from Johns Hopkins. Before the PhD, he worked in environmental [risk assessment](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle.
