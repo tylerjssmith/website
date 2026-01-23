@@ -19,8 +19,8 @@ bio: Tyler Smith is an epidemiologist studying how environmental exposures durin
 # Interests to show in About widget
 interests:
 - Cybersecurity
-- Environmental epidemiology
 - Machine learning
+- Epidemiology
 - Causal inference
 
 # Education to show in About widget
@@ -44,9 +44,6 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '/#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/tyler_js_smith
 - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: fas
   link: https://scholar.google.com/citations?user=TLeOENwAAAAJ
