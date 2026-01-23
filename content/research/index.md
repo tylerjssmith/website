@@ -10,6 +10,7 @@ Below are select examples of my research, including publications and presentatio
 * **Smith TJS**. (2022). Prenatal Arsenic Exposure and Influenza-like Illness among Infants in Rural Northern Bangladesh: Assessing Intervention Effects with the Parametric G-Formula. Presentation at Student Dissertation Workshop. *Society for Epidemiologic Research (SER) Annual Meeting*. Chicago, IL. June 14-17.
 
 ## Maternal and Child Health
+* **Smith TJS**\*, Saddiki H, Braun JM, MacFarlane AJ, Lavigne E, ... Oulhote Y. (2025). Air Pollution Mixture and Folate Status Indicators among Pregnant Women in Canada: Maternal-Infant Research on Environmental Chemicals (MIREC) Study, 2008 to 2011. *Current Developments in Nutrition*. ([Full Text](https://www.sciencedirect.com/science/article/pii/S2475299125030793))
 
 * **Smith TJS**\*, Avolio LNA\*, Navas-Acien A, Kruczynski K, Pisanic N, ... Heaney CD. (2023). The Pregnancy, Arsenic, and Immune Response (PAIR) Study in rural northern Bangladesh. *Paediatric and Perinatal Epidemiology*. ([Full Text](https://doi.org/10.1111/ppe.12949))
 
