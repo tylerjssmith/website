@@ -10,15 +10,20 @@ main:
   - name: CV
     url: /uploads/SmithTyler_Resume_Cyber.pdf
     weight: 20
-  - name: Research
-    url: 'research/'
+  - name: Epidemiology
+    identifier: epidemiology
     weight: 30
-  - name: Visualizations
-    url: 'visualizations/'
+  - name: Research
+    parent: epidemiology
+    url: 'research/'
     weight: 40
+  - name: Visualizations
+    parent: epidemiology
+    url: 'visualizations/'
+    weight: 50
   - name: Contact
     url: '#contact'
-    weight: 50
+    weight: 60
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
