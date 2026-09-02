@@ -57,8 +57,10 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Tyler Smith builds tools to detect cyber threats. He has over 7 years of experience developing machine learning models and data pipelines, and he holds Security+.
+Tyler Smith builds tools to detect and investigate cyber threats. He has over seven years of experience developing machine learning models and data pipelines and holds Security+.
 
-Tyler developed [pkgaudit](https://tylerjssmith.github.io/pkgaudit/), one of the only static analysis security tools for R packages, a frequently overlooked attack surface in environments handling sensitive data. He also built a [network intrusion detection model](https://github.com/tylerjssmith/cic-ids-2017) trained on 2.8 million flows to detect ten attack types with recall above 0.96, and a [serverless pipeline](https://github.com/tylerjssmith/inspector-llm-enricher) leveraging AI/LLMs to triage cloud vulnerability findings, hardened against prompt injection.
+Tyler developed [pkgaudit](https://tylerjssmith.github.io/pkgaudit/), a static analysis security tool for R packages -- an often-overlooked attack surface in regulated environments handling sensitive data. He also built a [network intrusion detection model](https://github.com/tylerjssmith/cic-ids-2017) trained on 2.8 million flows to detect ten attack types with recall above 0.96, and a [serverless vulnerability-enrichment pipeline](https://github.com/tylerjssmith/inspector-llm-enricher) that uses AI/LLMs to triage cloud vulnerability findings while defending against prompt injection.
 
-Tyler earned a PhD in epidemiology, which trained him to separate signal from noise and to quantify how confident that separation is. He applies these skills to distinguish real alerts from false positives. Before the PhD, Tyler worked in environmental risk assessment and frequently appeared before federal and state regulatory agencies. Tyler was born and raised in Seattle.
+Tyler earned a PhD in epidemiology, where he learned to separate signal from noise and quantify uncertainty. He applies the same discipline to security: distinguishing meaningful threats from false positives and building systems that support defensible decisions. Before earning his PhD, Tyler worked in environmental risk assessment and often appeared before federal and state regulatory agencies, including the U.S. Food and Drug Administration.
+
+Tyler was born and raised in Seattle.
