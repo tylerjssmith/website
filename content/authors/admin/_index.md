@@ -14,14 +14,7 @@ organizations:
   url: https://icahn.mssm.edu/about/departments/environmental-public-health
 
 # Short bio (displayed in user profile at end of posts)
-bio: Tyler Smith is an epidemiologist studying how environmental exposures during pregnancy and childhood can alter health and developmental trajectories.
-
-# Interests to show in About widget
-interests:
-- Cybersecurity
-- Machine learning
-- Epidemiology
-- Causal inference
+bio: Tyler Smith builds tools to detect cyber threats.
 
 # Education to show in About widget
 education:
@@ -64,8 +57,8 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Tyler Smith is a data scientist transitioning to cybersecurity with a STEM PhD, Security+ certification, and over 7 years of experience building and operationalizing machine learning models and data pipelines. 
+Tyler Smith builds tools to detect cyber threats. He is the developer of [pkgaudit](https://tylerjssmith.github.io/pkgaudit/), one of the only static analysis security tools for R packages, a frequently overlooked attack surface in environments handling sensitive data. He also builds AI/LLM-powered security automation, including a serverless pipeline that [triages cloud vulnerability findings](https://github.com/tylerjssmith/inspector-llm-enricher) hardened against prompt injection. He holds Security+ and has over 7 years of experience building machine learning models and data pipelines.
 
-Currently, as a postdoctoral research fellow at the Icahn School of Medicine at Mount Sinai, Tyler specializes in building supervised and unsupervised learning models for complex health datasets using Python and SQL. His previous research included anomaly detection in high-dimensional datasets using R and SQL. Tyler's cybersecurity experience includes developing AI/LLM-powered security automation tools ([GitHub](https://github.com/tylerjssmith/inspector-llm-enricher)) and deploying and securing data-driven web applications on AWS ([GitHub](https://github.com/tylerjssmith/rainydaypolitics)). 
+Detection is the throughline of Tyler's work. His PhD in epidemiology trained him to separate signal from noise and to quantify how confident that separation is -- the same skills needed to distinguish a real alert from a false positive. He has applied this expertise to [network intrusion detection](https://github.com/tylerjssmith/cic-ids-2017), training a multi-class model on 2.8 million flows that detects ten attack types at recall above 0.96. He writes tested, modular code with automated checks on every push, so his models and tools ship as maintainable software rather than one-off analysis scripts.
 
-Tyler combines strong analytical capabilities with proven experience communicating technical insights to diverse audiences, making him well-positioned for cybersecurity roles requiring both technical depth and strategic communication. Before the PhD, he worked in environmental [risk assessment](https://doi.org/10.1371/journal.pone.0118138). Tyler was born and raised in Seattle.
+Tyler pairs technical depth with proven experience communicating complex findings to diverse audiences, an approach shaped in part by his pre-doctoral work in environmental risk assessment, where quantifying and conveying risk was the core of the job. Tyler was born and raised in Seattle.
