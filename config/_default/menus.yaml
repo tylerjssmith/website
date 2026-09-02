@@ -10,20 +10,35 @@ main:
   - name: CV
     url: /uploads/SmithTyler_Resume_Cyber.pdf
     weight: 20
+  - name: Security
+    identifier: security
+    weight: 30
+  - name: pkgaudit
+    parent: security
+    url: https://tylerjssmith.github.io/pkgaudit/
+    weight: 40
+  - name: Network Intrusion Detection
+    parent: security
+    url: https://github.com/tylerjssmith/cic-ids-2017
+    weight: 50
+  - name: AI/LLM Security Automation
+    parent: security
+    url: https://github.com/tylerjssmith/inspector-llm-enricher
+    weight: 60
   - name: Epidemiology
     identifier: epidemiology
-    weight: 30
+    weight: 70
   - name: Research
     parent: epidemiology
     url: 'research/'
-    weight: 40
+    weight: 80
   - name: Visualizations
     parent: epidemiology
     url: 'visualizations/'
-    weight: 50
+    weight: 90
   - name: Contact
     url: '#contact'
-    weight: 60
+    weight: 100
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
