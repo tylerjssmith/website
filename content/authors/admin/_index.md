@@ -57,8 +57,12 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Tyler Smith builds tools to investigate cyber threats. He has over 7 years of experience developing machine learning models and data pipelines, and holds Security+.
+Tyler Smith builds security tools for data pipelines and computational workflows, with a particular interest in regulated environments. He has over 7 years of experience developing machine learning models and data pipelines, and holds Security+.
 
-Tyler developed [pkgaudit](https://tylerjssmith.github.io/pkgaudit/), a static analysis security tool for R packages -- an often-overlooked attack surface in regulated environments handling sensitive data. He also built a [network intrusion detection model](https://github.com/tylerjssmith/cic-ids-2017) trained on 2.8 million flows to detect ten attack types with recall above 0.96, and a [serverless vulnerability-enrichment pipeline](https://github.com/tylerjssmith/inspector-llm-enricher) that uses AI/LLMs to triage cloud vulnerability findings while defending against prompt injection.
+Tyler develops and maintains [pkgaudit](https://tylerjssmith.github.io/pkgaudit/), a package-aware static analysis security tool that identifies security-relevant code across the R package lifecycle -- addressing an under-appreciated software supply chain risk in regulated analytics environments.
 
-Tyler earned a PhD in epidemiology, where he learned to separate signal from noise and quantify uncertainty. He applies the same discipline to security: distinguishing meaningful threats from false positives and building systems that support defensible decisions. Before earning his PhD, Tyler worked in environmental risk assessment and often appeared before federal and state regulatory agencies, including the U.S. Food and Drug Administration.
+His other security projects span network threat detection, cloud vulnerability management, and AI security, including a
+[network intrusion detection model](https://github.com/tylerjssmith/cic-ids-2017) trained on 2.8 million flows and a
+[serverless vulnerability-enrichment pipeline](https://github.com/tylerjssmith/inspector-llm-enricher) hardened against prompt injection.
+
+Tyler earned a PhD in epidemiology, where he built reproducible analyses and data pipelines for regulated research. He brings a practitioner’s understanding of data science and analytic workflows, helping him design security controls that protect pipelines without losing sight of their purpose. Earlier in his career, Tyler worked in environmental risk assessment and frequently engaged with federal and state regulatory agencies, including the U.S. Food and Drug Administration.
